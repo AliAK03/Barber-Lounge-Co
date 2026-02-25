@@ -1,0 +1,645 @@
+body
+{
+    /* background-color: purple; */
+    background-image: url("images/marble pattern.png");
+    background-repeat: repeat;
+    font-family: 'Abhaya Libre', serif;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 80%;
+}
+.header
+{
+    height: 100px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+}
+.barber-logo
+{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.barber-logo img
+{
+    height: 50px;
+    width: auto;
+}
+.hamburger-menu
+{
+    height: 100px;
+    width: 100px;
+    font-size: 35px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.hamburger-menu:hover
+{
+    color: darkcyan;
+}
+.top-picture
+{
+    max-width: 600px;   /* controls layout */
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+}
+.top-picture img
+{
+      mask-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 1%,
+    white 20%
+      );
+      max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0; 
+    background-color:rgba(0, 0, 0, 0.764);
+    opacity: 0%;
+    transition: opacity 0.5s ease;
+    color: white;
+    pointer-events: none;
+}
+.overlay.open
+{
+    opacity: 100%;
+    transition: opacity 0.5s ease;
+    pointer-events: auto;
+}
+.tagline
+{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+}
+.tagline p
+{
+    color: white;
+    font-size: 20px;
+}
+.blurb-section
+{
+    height: 700px;
+    width: 100%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    justify-content: space-between;
+}
+#left-blurb
+{
+    background-color: rgba(0, 0, 0, 0);
+    align-self: flex-start;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 100px;
+    opacity: 0%;
+    transition: opacity 0.2s ease;
+    width: 370px;
+}
+#right-blurb
+{
+    background-color: rgba(0, 0, 0, 0);
+    align-self: flex-end;
+    position: absolute;
+    margin-right: 10%;
+    margin-top: 100px;
+    opacity: 0%;
+    transition: opacity 0.2s ease;
+    width: 390px;
+}
+.logo
+{
+    height: 200px;
+    width: 200px;
+    background-color: none;
+    margin: 0 auto;
+}
+.logo img
+{
+    height: 100%;
+    width: 100%;
+}
+.signature
+{
+    width: 100px;
+    height: 50px;
+    background-color: none;
+    margin: 0 auto 0 auto;
+}
+.signature img
+{
+    width: 100px;
+    height: 50px;
+}
+.product-line
+{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; /* safety */
+    -webkit-overflow-scrolling: touch;
+}
+.product-line::-webkit-scrollbar
+{
+    display: none;
+}
+.item
+{
+    min-width: 150px; 
+    height: 175px;
+    background: lightgray;
+    flex-shrink: 0; 
+    border-radius: 15px;
+}
+#products
+{
+    height: 650px;
+}
+#product-id
+{
+    /* background-color: red; */
+    align-self: center;
+    justify-self: center;
+    width: 300px;
+    text-align: left;
+}
+.black-section
+{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+#contact
+{
+    height: 210px;
+    width: 100%;
+    background-color: black;
+}
+#review2
+{
+          mask-image: linear-gradient(
+    to top,
+    rgba(255,255,255,0) 1%,
+    white 10%
+      );
+      max-width: 100%;
+}
+.stars
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stars img
+{
+    width: 150px;
+    height: 150px;
+}
+.click-here
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.click-here a
+{
+    padding-top: 40px;
+    color: white;
+}
+.click-here a:hover
+{
+    color: gold;
+}
+#location
+{
+    height: 450px;
+}
+.local
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ff0000; */
+}
+.local-icon
+{
+
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* background-color: aqua; */
+    transform: translateX(-50px);
+}
+#click-location a
+{
+    color: white;
+}
+#click-location a:hover .local-icon
+{
+    font-size: 40px;
+    transition: font-size 0.1s ease-in-out;
+}
+.kaka
+{
+    /* background-color: #ff0000; */
+    height: 500px;
+    width: 390px;
+}
+.blurb-text
+{
+    font-size: 30px;
+    text-align: left;
+    background-color: none;
+    color: black;
+}
+#bottom-blurb
+{
+    width: 470px;
+}
+#blurb2
+{
+    font-size: 30px;
+    text-align: center;
+    height: 790px;
+}
+.Title
+{
+    font-size: 60px;
+    text-align: center;
+    background-color: black;
+    margin-top: 0px;
+    color: white;
+}
+#hours
+{
+    border-radius: 70px 70px 0 0;
+}
+#hours2
+{
+    border-radius: 70px 70px 0 0;
+    height: 550px;
+}
+#seven-days
+{
+    font-size: 20px;
+}
+.day
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 23px;
+    margin-bottom: -30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.white-line
+{
+    height: 1px;
+    width: 300px;
+    background-color: white;
+    margin: 0 auto;
+}
+.info
+{
+    text-align: center;
+}
+#open-burger
+{
+    font-size: 30px;
+    margin-bottom: -5px;
+}
+#open-burger a
+{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+#open-burger a:hover
+{
+    color: darkcyan;
+}
+.map
+{
+    height: 200px;
+    width: 200px;
+}
+.map img
+{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.map
+{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.footer
+{
+    height: 100px;
+    width: 100%;
+    /* background-color: darkcyan; */
+    display: flex;
+}
+.icon
+{
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+    /* background-color: green; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#insta
+{
+    -webkit-text-size-adjust: 80%;
+}
+#insta a
+{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#insta:hover
+{
+    background: -webkit-linear-gradient(#ff0000, #8000ff);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#google
+{
+    font-size: 55px;
+    -webkit-text-size-adjust: 80%;
+}
+#google a
+{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+     margin-right: 20px;
+}
+#google a:hover
+{
+    color: gold;
+}
+@media (min-width: 768px) 
+{
+    .black-section
+    {
+        /* background-color: grey; */
+    }
+    .day
+    {
+        width: 300px;
+        align-self: center;
+        justify-self: center;
+    }
+    .day p
+    {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .top-picture
+    {
+        max-height: 1005px;
+        width: 100%;
+        max-width: 100%;
+        /* background-color: aqua; */
+        overflow: hidden; 
+    }
+    .top-picture img
+    {
+        height: auto;
+        width: 100%;
+    }
+    .overlay
+    {
+        opacity: 100%;
+        transition: opacity 0.5s ease;
+        pointer-events: auto;
+    }
+    #open-burger
+    {
+        margin-bottom: 30px;
+    }
+    #open-burger a
+    {
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .logo img
+    {
+        margin-top: 0px;
+    }
+    .hamburger-menu
+    {
+        opacity: 0%;
+        pointer-events: none;
+    }
+    .item
+    {
+        min-width: 300px;
+        height: 275px;
+    }
+    #products
+    {
+        height: 750px;
+    }
+}
+/* mobile */
+@media (max-width: 400px) 
+{
+    .white-line
+    {
+        width:250px;
+        background-color: white;
+    }
+    #insta a
+    {
+        margin-right: 30px;
+        margin-top: 30px;
+        /* background-color: #ff0000; */
+    }
+    #google a
+    {
+         margin-right: 80px;
+         margin-top: 30px;
+    }
+    #first-logo
+    {
+        background-color: none;
+        height: 100px;
+        width: 100px;
+    }
+    .overlay p
+    {
+        /* margin: px; */
+    }
+    #hours2
+    {
+        border-radius: 70px 70px 0 0;
+        height: 42%;
+        /* background-color: #8000ff; */
+        padding-bottom: 35px;
+    }
+    .kaka
+    {
+        /* background-color: red; */
+        height: 100%;
+        width: auto;
+    }
+    #products
+    {
+        height: 750px;
+        background-color: black;
+        height: 53%;
+    }
+    #contact-title
+    {
+        margin-top:0px;
+    }
+    #contact
+    {
+        height: 18%;
+    }
+    #hours2
+    {
+        border-radius: 50px 50px 0 0;
+
+    }
+    .stars img
+    {
+        width: 100px;
+        height: auto;
+    }
+    #review2
+    {
+        height: 60%;
+        background-color: black;
+    }
+    .click-here
+    {
+        margin-bottom: 50px;
+    }
+    .click-here a
+    {
+        color: gold;
+        text-decoration: none;
+    }
+    #first-blurb
+    {
+        height: 50%;
+        /* background-color: aqua; */
+    }
+    #bottom-blurb
+    {
+        width: auto;
+    }
+    #blurb2
+    {
+        height: 50%;
+        /* background-color: #ff0000; */
+    }
+    #product-id
+    {
+        height: 220px;
+        width: 220px;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #location
+    {
+        height: 400px;
+    }
+    .hamburger-menu:hover
+    {
+        color: black;
+    }
+    #insta
+    {
+        background: -webkit-linear-gradient(#ff0000, #8000ff);
+        -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #google a
+    {
+        color: rgb(255, 204, 0);
+    }
+    .blurb-text
+    {
+        font-size: 25px;
+        /* background-color: #ff0000; */
+    }
+    #left-blurb
+    {
+        display: none;
+    }
+    #right-blurb
+    {
+        display: none;
+    }
+    }
+@media (min-width: 1490px) 
+{
+    #left-blurb
+    {
+        opacity: 100%;
+        transition: opacity 0.2s ease;
+    }
+    #right-blurb
+    {
+        opacity: 100%;
+        transition: opacity 0.9s ease;
+    }
+}
