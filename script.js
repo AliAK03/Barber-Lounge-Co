@@ -36,6 +36,7 @@
     //     const x = e.pageX - slider.offsetLeft;
     //     const walk = (x - startX) * 1.5; // scroll speed
     //     slider.scrollLeft = scrollLeft - walk;
-    });
+    //});
 
     
+
