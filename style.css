@@ -35,7 +35,7 @@ html {
     height: 100px;
     width: 100px;
     font-size: 35px;
-    color: cyan;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -683,4 +683,5 @@ html {
         transition: opacity 0.9s ease;
     }
 }
+
 
